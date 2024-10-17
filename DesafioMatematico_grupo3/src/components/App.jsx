@@ -1,4 +1,6 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+import Inicio from './Inicio.jsx';
+import Juego from './Juego.jsx'
 
 function App(){
     const[juegoIniciado,setJuegoIniciado] = useState(false);
@@ -9,7 +11,9 @@ function App(){
 
     return(
         <div className="App">
-            {!juegoIniciado ? <Inicio onStart={iniciarJuego}/>:<Juego/>}
+            {!juegoIniciado ? <Inicio onStart={inciarJuego}/>:<Juego/>}
         </div>
     );
 }
+
+export default App;

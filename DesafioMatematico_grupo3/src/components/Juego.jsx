@@ -38,4 +38,5 @@ const Juego = () => {
         </div>
     );
 }
-    
+
+export default Juego;
