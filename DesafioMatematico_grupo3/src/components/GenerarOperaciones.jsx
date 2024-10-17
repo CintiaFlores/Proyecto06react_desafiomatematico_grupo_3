@@ -4,8 +4,7 @@ function generarOperacion() {
     const num2 = Math.floor(Math.random() * 10) + 1;
 
     return tipo === 'suma'
-      ? { pregunta: '${num1} + ${num2}', respuesta: num1 + num2 }
-      : { pregunta: '${Math.max(num1, num2)} - ${Math.min(num1, num2)}', respuesta: Math.abs(num1 - num2) };
+    ? { pregunta: `${num1} + ${num2}`, respuesta: num1 + num2 }
+    : { pregunta: `${Math.max(num1, num2)} - ${Math.min(num1, num2)}`, respuesta: Math.abs(num1 - num2) };
   }
-
   export default generarOperacion;
