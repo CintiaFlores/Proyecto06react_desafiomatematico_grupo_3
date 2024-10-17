@@ -1,4 +1,9 @@
 import React,{useState} from 'react';
+import generarOperacion from './GenerarOperaciones';
+import verificarRespuesta from './verificarRespuesta';
+import siguienteDesafio from './siguienteDesafio';
+import CardDesafio from './TarjetaOperaciones';
+import Puntuacion from './Puntuacion';
 
 const Juego = () => {
     const [operacion, setOperacion] = useState(generarOperacion());
@@ -10,5 +15,27 @@ const Juego = () => {
     const manejarVerificacion = () =>{
         verificarRespuesta(respuesta, operacion,setResultado, setPuntos, puntos);
         setIntentos(intentos + 1);
+    };
+    
+    const manejarSiguienteDesafio = () => {
+        siguienteDesafio(setOperacion, generarOperacion, setRespuesta, setResultado);
+    };
+    
+    if (intentos === 5){
+        return <Puntuacion puntos={puntos}/>
     }
+    return (
+        <div className="jeugo">
+            <CardDesafio
+                operacion={operacion}
+                respuesta={respuesta}
+                setRespuesta={setRespuesta}
+                verificarRespuesta={manejarVerificacion}
+                siguienteDesafio={manejarSiguienteDesafio}
+                intentos={intentos}
+                puntos={puntos}
+            />
+        </div>
+    );
 }
+    
