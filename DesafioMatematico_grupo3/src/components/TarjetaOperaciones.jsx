@@ -10,7 +10,9 @@ const CardDesafio = ({
   verificarRespuesta,
   siguienteDesafio,
   intentos,
-  puntos
+  puntos,
+  resultado,
+  botonHabilitado
 }) => {
   return (
     <div className="card-container">
@@ -32,11 +34,12 @@ const CardDesafio = ({
           </div>
 
           <div className="d-flex justify-content-between">
-            <button className="btn btn-primary"onClick={verificarRespuesta}>Verificar Respuesta</button>
-            <button className="btn btn-secondary"onClick={siguienteDesafio}>Siguiente Desafío</button> 
+            <button className="btn btn-primary"onClick={verificarRespuesta}disabled={!botonHabilitado}>Verificar Respuesta</button>
+            <button className="btn btn-secondary"onClick={siguienteDesafio}>Cambiar Desafio</button> 
           </div>
 
           <div>
+            <p className="text-center mt-3">Respuesta: {resultado}</p>
             <p className="text-center mt-3">Desafíos resueltos: {puntos}</p>
             <p className="text-center mt-3">Desafio{intentos + 1} de 5</p>
           </div>

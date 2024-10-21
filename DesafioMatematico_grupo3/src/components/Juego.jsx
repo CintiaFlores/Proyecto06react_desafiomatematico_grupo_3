@@ -11,21 +11,24 @@ const Juego = () => {
     const [resultado, setResultado] = useState(null);
     const [intentos, setIntentos] = useState(0);
     const [puntos, setPuntos] = useState(0);
+    const [botonHabilitado, setBotonHabilitado] = useState(true);
     
     const manejarVerificacion = () =>{
         verificarRespuesta(respuesta, operacion,setResultado, setPuntos, puntos);
+        setBotonHabilitado(false);
         setIntentos(intentos + 1);
     };
     
     const manejarSiguienteDesafio = () => {
         siguienteDesafio(setOperacion, generarOperacion, setRespuesta, setResultado);
+        setBotonHabilitado(true);
     };
     
     if (intentos === 5){
         return <Puntuacion puntos={puntos}/>
     }
     return (
-        <div className="jeugo">
+        <div className="juego">
             <CardDesafio
                 operacion={operacion}
                 respuesta={respuesta}
@@ -34,6 +37,8 @@ const Juego = () => {
                 siguienteDesafio={manejarSiguienteDesafio}
                 intentos={intentos}
                 puntos={puntos}
+                resultado={resultado}
+                botonHabilitado={botonHabilitado}
             />
         </div>
     );
