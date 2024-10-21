@@ -1,0 +1,15 @@
+.imagenTarjeta {
+    position: fixed; 
+    right: 100px;
+    top: 50%; 
+    transform: translateY(-25%);
+    z-index: 9;
+  }
+  
+  .imagenTarjeta img {
+    max-width: 80%;
+    
+    height: auto;
+  }
+  
+  
