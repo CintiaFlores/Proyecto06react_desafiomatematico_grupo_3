@@ -1,13 +1,18 @@
 .card-desafio {
+  position: fixed;
+  right: 350px; 
+  top: 50%; 
+  transform: translateY(20%); 
+  z-index: 11;
     width: 22rem;
-    margin: 0 auto;
-    margin-top: 20px;
+   
+    
   }
   
   .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Altura completa de la ventana */
+    height: 100vh;
   }
   
