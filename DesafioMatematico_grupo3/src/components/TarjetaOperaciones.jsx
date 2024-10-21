@@ -10,7 +10,8 @@ const CardDesafio = ({
   verificarRespuesta,
   siguienteDesafio,
   intentos,
-  puntos
+  puntos,
+  resultado
 }) => {
   return (
     <div className="card-container">
@@ -37,6 +38,7 @@ const CardDesafio = ({
           </div>
 
           <div>
+            <p className="text-center mt-3">Respuesta: {resultado}</p>
             <p className="text-center mt-3">Desafíos resueltos: {puntos}</p>
             <p className="text-center mt-3">Desafio{intentos + 1} de 5</p>
           </div>

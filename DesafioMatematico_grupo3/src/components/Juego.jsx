@@ -25,7 +25,7 @@ const Juego = () => {
         return <Puntuacion puntos={puntos}/>
     }
     return (
-        <div className="jeugo">
+        <div className="juego">
             <CardDesafio
                 operacion={operacion}
                 respuesta={respuesta}
@@ -34,6 +34,7 @@ const Juego = () => {
                 siguienteDesafio={manejarSiguienteDesafio}
                 intentos={intentos}
                 puntos={puntos}
+                resultado={resultado}
             />
         </div>
     );
