@@ -41,7 +41,7 @@ const CardDesafio = ({
           <div>
             <p className="text-center mt-3">Respuesta: {resultado}</p>
             <p className="text-center mt-3">Desafíos resueltos: {puntos}</p>
-            <p className="text-center mt-3">Desafio{intentos + 1} de 5</p>
+            <p className="text-center mt-3">Desafio{intentos} de 5</p>
           </div>
         </div>
       </div>

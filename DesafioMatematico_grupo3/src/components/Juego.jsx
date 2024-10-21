@@ -16,12 +16,11 @@ const Juego = () => {
     const manejarVerificacion = () =>{
         verificarRespuesta(respuesta, operacion,setResultado, setPuntos, puntos);
         setBotonHabilitado(false);
-        setIntentos(intentos + 1);
     };
     
     const manejarSiguienteDesafio = () => {
-        siguienteDesafio(setOperacion, generarOperacion, setRespuesta, setResultado);
-        setBotonHabilitado(true);
+        siguienteDesafio(setOperacion, generarOperacion, setRespuesta, setResultado,setBotonHabilitado, intentos);
+        setIntentos(intentos + 1);
     };
     
     if (intentos === 5){
