@@ -1,13 +1,13 @@
 .imagenTarjeta {
     position: fixed; 
-    right: 100px;
-    top: 50%; 
+    right: -105px;
+    top: 35%; 
     transform: translateY(-25%);
     z-index: 9;
   }
   
   .imagenTarjeta img {
-    max-width: 80%;
+    max-width: 65%;
     
     height: auto;
   }
